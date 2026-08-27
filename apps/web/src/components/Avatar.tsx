@@ -70,7 +70,8 @@ const Avatar = ({
       {apartment != null && (
         <span
           className={twMerge(
-            "absolute -bottom-1 -right-1.5 z-10 rounded-full bg-indigo-600 px-1 text-[8px] font-semibold leading-[12px] text-white ring-1 ring-white dark:ring-dark-100",
+            "absolute -bottom-0.5 -right-0.5 z-10 rounded-full bg-indigo-600 px-[3px] text-[7px] font-semibold leading-[10px] text-white ring-1 ring-white dark:ring-dark-100",
+            size === "md" && "text-[8px] leading-[12px]",
             size === "lg" && "text-[10px] leading-[14px]",
           )}
         >

@@ -145,7 +145,7 @@ const Card = ({
                 </div>
               )}
               {members.length > 0 && (
-                <div className="isolate flex justify-end -space-x-1 overflow-hidden">
+                <div className="isolate flex justify-end gap-1">
                   {members.map(({ user, email }) => {
                     const avatarUrl = user?.image
                       ? getAvatarUrl(user.image)
