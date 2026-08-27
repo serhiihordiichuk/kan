@@ -173,6 +173,7 @@ export const getPaginatedActivities = async (
               name: true,
               email: true,
               image: true,
+              apartment: true,
             },
           },
         },
@@ -183,6 +184,7 @@ export const getPaginatedActivities = async (
           name: true,
           email: true,
           image: true,
+          apartment: true,
         },
       },
       comment: {

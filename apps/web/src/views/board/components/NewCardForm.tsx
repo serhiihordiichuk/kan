@@ -259,6 +259,7 @@ export function NewCardForm({
           imageUrl={
             member.user?.image ? getAvatarUrl(member.user.image) : undefined
           }
+          apartment={member.user?.apartment}
           email={member.user?.email ?? member.email}
         />
       ),

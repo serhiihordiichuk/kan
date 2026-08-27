@@ -34,6 +34,7 @@ export function CardContextMembersModal() {
         <Avatar
           size="xs"
           name={member.user?.name ?? ""}
+    apartment={member.user?.apartment}
           imageUrl={
             member.user?.image ? getAvatarUrl(member.user.image) : undefined
           }

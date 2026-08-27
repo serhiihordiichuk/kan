@@ -520,6 +520,7 @@ const ActivityList = ({
               name={activity.user?.name ?? ""}
               email={activity.user?.email ?? ""}
               image={activity.user?.image ?? null}
+              apartment={activity.user?.apartment}
               isLoading={isLoading}
               createdAt={activity.createdAt.toISOString()}
               comment={activity.comment?.comment}
@@ -542,6 +543,7 @@ const ActivityList = ({
                 name={activity.user?.name ?? ""}
                 email={activity.user?.email ?? ""}
                 imageUrl={getAvatarUrl(activity.user?.image ?? null) || undefined}
+                apartment={activity.user?.apartment}
                 icon={getActivityIcon(
                   activity.type,
                   activity.fromList?.index,

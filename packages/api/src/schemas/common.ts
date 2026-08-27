@@ -29,6 +29,7 @@ export const userSchema = z.object({
   name: z.string().nullable(),
   email: z.string(),
   image: z.string().nullable(),
+  apartment: z.number().nullable().optional(),
 });
 
 // Workspace member sub-object

@@ -26,6 +26,7 @@ const Comment = ({
   name,
   email,
   image,
+  apartment,
   isLoading,
   createdAt,
   comment,
@@ -38,6 +39,7 @@ const Comment = ({
   name: string;
   email: string;
   image: string | null;
+  apartment?: number | null;
   isLoading: boolean;
   createdAt: string;
   comment: string | undefined;
@@ -137,6 +139,7 @@ const Comment = ({
             name={name ?? ""}
             email={email ?? ""}
             imageUrl={getAvatarUrl(image) || undefined}
+            apartment={apartment}
             isLoading={isLoading}
           />
 

@@ -583,6 +583,7 @@ export const getWithListAndMembersByPublicId = async (
                           name: true,
                           email: true,
                           image: true,
+                          apartment: true,
                         },
                       },
                     },
@@ -661,6 +662,7 @@ export const getWithListAndMembersByPublicId = async (
                   id: true,
                   name: true,
                   email: true,
+                  apartment: true,
                 },
               },
             },
@@ -670,6 +672,7 @@ export const getWithListAndMembersByPublicId = async (
               id: true,
               name: true,
               email: true,
+              apartment: true,
             },
           },
           comment: {

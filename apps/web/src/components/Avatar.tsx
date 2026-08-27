@@ -17,6 +17,7 @@ const Avatar = ({
   icon,
   imageUrl,
   isLoading,
+  apartment,
 }: {
   size?: "xs" | "sm" | "md" | "lg";
   name: string;
@@ -24,13 +25,14 @@ const Avatar = ({
   imageUrl?: string;
   icon?: React.ReactNode;
   isLoading?: boolean;
+  apartment?: number | null;
 }) => {
   const initials = name?.trim()
     ? getInitialsFromName(name)
     : inferInitialsFromEmail(email);
 
   return (
-    <>
+    <span className="relative inline-flex">
       {imageUrl ? (
         <Image
           src={imageUrl}
@@ -65,7 +67,17 @@ const Avatar = ({
           )}
         </span>
       )}
-    </>
+      {apartment != null && (
+        <span
+          className={twMerge(
+            "absolute -bottom-1 -right-1.5 z-10 rounded-full bg-indigo-600 px-1 text-[8px] font-semibold leading-[12px] text-white ring-1 ring-white dark:ring-dark-100",
+            size === "lg" && "text-[10px] leading-[14px]",
+          )}
+        >
+          {apartment}
+        </span>
+      )}
+    </span>
   );
 };
 

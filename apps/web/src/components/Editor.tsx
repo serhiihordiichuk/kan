@@ -88,6 +88,7 @@ export interface WorkspaceMember {
     id: string | null;
     name: string | null;
     image: string | null;
+    apartment?: number | null;
   } | null;
   email: string;
 }
@@ -209,6 +210,7 @@ interface MentionItem {
   id: string;
   label: string;
   image: string | null;
+  apartment?: number | null;
 }
 
 const MentionList = forwardRef<
@@ -262,6 +264,7 @@ const MentionList = forwardRef<
                 name={item.label}
                 imageUrl={item.image ? getAvatarUrl(item.image) : undefined}
                 email={item.label}
+                apartment={item.apartment}
               />
               <span className="ml-3 text-[12px] font-medium text-dark-900 dark:text-dark-1000">
                 {item.label}
@@ -522,6 +525,7 @@ export default function Editor({
                 id: member.publicId,
                 label: member?.user?.name?.trim() || member.email || "",
                 image: member?.user?.image ?? null,
+                apartment: member?.user?.apartment ?? null,
               }));
 
               const all: MentionItem[] = mapped.filter(

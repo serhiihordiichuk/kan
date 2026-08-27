@@ -104,6 +104,7 @@ export function CardRightPanel({ isTemplate }: { isTemplate?: boolean }) {
         imageUrl: member.user?.image
           ? getAvatarUrl(member.user.image)
           : undefined,
+        apartment: member.user?.apartment,
         selected: isSelected ?? false,
         leftIcon: (
           <Avatar
@@ -112,6 +113,7 @@ export function CardRightPanel({ isTemplate }: { isTemplate?: boolean }) {
             imageUrl={
               member.user?.image ? getAvatarUrl(member.user.image) : undefined
             }
+            apartment={member.user?.apartment}
             email={member.user?.email ?? member.email}
           />
         ),

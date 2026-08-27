@@ -30,6 +30,7 @@ const boardCardMemberSchema = z.object({
       name: z.string().nullable(),
       email: z.string(),
       image: z.string().nullable(),
+      apartment: z.number().nullable().optional(),
     })
     .nullable(),
 });

@@ -25,6 +25,7 @@ interface Member {
     name: string | null;
     image: string | null;
     email: string;
+    apartment?: number | null;
   } | null;
 }
 
@@ -88,6 +89,7 @@ const Filters = ({
         imageUrl={
           member.user?.image ? getAvatarUrl(member.user.image) : undefined
         }
+        apartment={member.user?.apartment}
         email={member.user?.email ?? ""}
       />
     ),

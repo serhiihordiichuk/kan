@@ -31,7 +31,12 @@ const Card = ({
   members: {
     publicId: string;
     email: string;
-    user: { name: string | null; email: string; image: string | null } | null;
+    user: {
+      name: string | null;
+      email: string;
+      image: string | null;
+      apartment?: number | null;
+    } | null;
   }[];
   checklists: {
     publicId: string;
@@ -151,6 +156,7 @@ const Card = ({
                         name={user?.name ?? ""}
                         email={user?.email ?? email}
                         imageUrl={avatarUrl}
+                        apartment={user?.apartment}
                         size="sm"
                       />
                     );
